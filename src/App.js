@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RandHexBoxList from "./components/RandHexBoxList/RandHexBoxList";
+import NavBar from "./components/NavBar/NavBar";
 import classes from "./App.module.css";
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className={classes.App}>
+        <NavBar />
         <button onClick={this.addAnotherColor}>Add Another Color</button>
         <RandHexBoxList
           hexList={this.state.randHexList}

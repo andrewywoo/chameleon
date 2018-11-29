@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans");
+
+.NavBar {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.NavBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/chameleon-nav.jpg");
+  filter: opacity(70%);
+  background-size: 60% auto;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.brand {
+  font-size: 3rem;
+  font-family: "Black Han Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;
+  filter: none;
+  z-index: 1;
+}

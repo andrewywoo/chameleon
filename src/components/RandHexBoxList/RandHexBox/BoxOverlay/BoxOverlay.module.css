@@ -1,3 +1,9 @@
 .hexText {
-  transition: opacity 500ms;
+  transition: opacity 500ms ease-out;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
 }

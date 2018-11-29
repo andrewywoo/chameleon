@@ -1,7 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 
-const boxOverlay = props => {
-  return <p style={{ visibility: props.isVisible }}>{props.randomHex}</p>;
-};
+class BoxOverlay extends Component {
+  state = {};
 
-export default boxOverlay;
+  render() {
+    return <p>{this.props.randomHex}</p>;
+  }
+}
+
+export default BoxOverlay;

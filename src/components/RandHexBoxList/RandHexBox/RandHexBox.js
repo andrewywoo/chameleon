@@ -8,14 +8,8 @@ const randHexBox = props => {
       className={classes.RandHexBox}
       style={{ backgroundColor: props.randomHex }}
       onClick={props.clicked.bind(this, props.index)}
-      //onMouseOver={props.hover.bind(this, props.index)}
-      //onMouseLeave={props.hover.bind(this, props.index)}
     >
-      <BoxOverlay
-        randomHex={props.randomHex}
-        isVisible={props.isVisible}
-        index={props.index}
-      />
+      <BoxOverlay randomHex={props.randomHex} index={props.index} />
     </div>
   );
 };

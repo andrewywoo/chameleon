@@ -9,9 +9,7 @@ const randHexBoxList = props => {
         key={index}
         index={index}
         randomHex={hex.hexColor}
-        isVisible={hex.visibility}
         clicked={props.clicked}
-        hover={props.hover}
       />
     );
   });

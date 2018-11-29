@@ -27,9 +27,14 @@
 .brand {
   font-size: 3rem;
   font-family: "Black Han Sans", sans-serif;
-  padding: 0;
-  margin: 0;
   margin-left: 2rem;
   filter: none;
   z-index: 1;
+}
+
+.author {
+  font-size: 1rem;
+  font-family: "Black Han Sans", sans-serif;
+  align-self: flex-end;
+  margin-right: 2rem;
 }

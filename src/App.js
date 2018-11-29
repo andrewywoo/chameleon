@@ -19,7 +19,7 @@ class App extends Component {
 
   addAnotherColor = () => {
     const addRandHex = [...this.state.randHexList];
-    addRandHex.push({ hexColor: this.getColor(), visibility: "hidden" });
+    addRandHex.push({ hexColor: this.getColor(), visibility: "visible" });
     this.setState({ randHexList: addRandHex });
   };
 

@@ -7,9 +7,9 @@ const randHexBox = props => {
     <div
       className={classes.RandHexBox}
       style={{ backgroundColor: props.randomHex }}
-      onClick={props.clicked.bind(this, props.index)}
+      onClick={props.change}
     >
-      <BoxOverlay randomHex={props.randomHex} index={props.index} />
+      <BoxOverlay randomHex={props.randomHex} delete={props.delete} />
     </div>
   );
 };

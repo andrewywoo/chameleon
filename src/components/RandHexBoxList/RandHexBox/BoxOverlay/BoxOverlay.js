@@ -16,7 +16,12 @@ class BoxOverlay extends Component {
     const newState = { ...this.state };
     newState.isTextVisible = true;
     this.setState(newState);
+    setTimeout(this.hideHexText, 2000);
   };
+
+  componentDidMount() {
+    setTimeout(this.hideHexText, 2000);
+  }
 
   render() {
     const style = {
@@ -25,12 +30,31 @@ class BoxOverlay extends Component {
 
     this.state.isTextVisible ? (style.opacity = 1) : (style.opacity = 0);
 
-    setTimeout(this.hideHexText, 2000);
+    // (function() {
+    //   let flag = true;
+    //   return function() {
+    //     if (flag) {
+    //       flag = false;
+    //       this.showHexText();
+    //     }
+    //   };
+    // })();
+
+    //setTimeout(this.hideHexText, 2000);
 
     return (
-      <p className={classes.hexText} style={style}>
-        {this.props.randomHex}
-      </p>
+      <div className={classes.BoxOverlay} onMouseOver={this.showHexText}>
+        <div
+          className={classes.close}
+          style={style}
+          onClick={this.props.delete}
+        >
+          X
+        </div>
+        <p className={classes.hexText} style={style}>
+          {this.props.randomHex}
+        </p>
+      </div>
     );
   }
 }

@@ -9,8 +9,9 @@ const randHexBoxList = props => {
         key={index}
         index={index}
         randomHex={hex.hexColor}
-        delete={props.delete.bind(this, index)}
-        change={props.change.bind(this, index)}
+        view={props.view}
+        del={event => props.del(event, index)}
+        change={event => props.change(event, index)}
       />
     );
   });

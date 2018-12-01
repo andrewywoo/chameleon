@@ -6,8 +6,8 @@ const controlBar = props => {
     <div className={classes.ControlBar}>
       <button onClick={props.add}>Add Another Color</button>
       <select onChange={props.switch}>
-        <option value="Cards">Cards</option>
-        <option value="List">List</option>
+        <option value="tiled">Tiled</option>
+        <option value="listed">Listed</option>
       </select>
     </div>
   );

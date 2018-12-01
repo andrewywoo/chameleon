@@ -44,13 +44,13 @@ class BoxOverlay extends Component {
 
     return (
       <div className={classes.BoxOverlay} onMouseOver={this.showHexText}>
-        <div
+        <button
           className={classes.close}
           style={style}
-          onClick={this.props.delete}
+          onClick={this.props.del}
         >
           X
-        </div>
+        </button>
         <p className={classes.hexText} style={style}>
           {this.props.randomHex}
         </p>

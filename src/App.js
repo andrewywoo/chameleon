@@ -5,12 +5,14 @@ import ControlBar from "./components/ControlBar/ControlBar";
 import classes from "./App.module.css";
 
 class App extends Component {
-  getColor = () => "#" + Math.floor(Math.random() * 16777215).toString(16);
-
   state = {
     randHexList: [{ hexColor: this.getColor() }],
     view: "cards"
   };
+
+  getColor() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16);
+  }
 
   addAnotherColor = () => {
     const hexList = [...this.state.randHexList];
@@ -18,30 +20,31 @@ class App extends Component {
     this.setState({ randHexList: hexList });
   };
 
-  deleteAColor = index => {
+  deleteAColor = (e, index) => {
+    if (!e) window.event.cancelBubble = true;
+    if (e.stopPropagation) e.stopPropagation();
     const hexList = [...this.state.randHexList];
     hexList.splice(index, 1);
     this.setState({ randHexList: hexList });
   };
 
-  changeColor = index => {
+  changeColor = (e, index) => {
     const hexList = [...this.state.randHexList];
     hexList[index].hexColor = this.getColor();
     this.setState({ randHexList: hexList });
   };
 
   switchView = event => {
-    console.log("did i get here" + event.target.value);
     let value = event.target.value.toLowerCase();
     switch (value) {
-      case "cards":
-        this.setState({ view: "cards" });
+      case "tiled":
+        this.setState({ view: "tiled" });
         break;
-      case "list":
-        this.setState({ view: "list" });
+      case "listed":
+        this.setState({ view: "listed" });
         break;
       default:
-        this.setState({ view: "cards" });
+        this.setState({ view: "tiled" });
     }
   };
 
@@ -52,7 +55,8 @@ class App extends Component {
         <ControlBar add={this.addAnotherColor} switch={this.switchView} />
         <RandHexBoxList
           hexList={this.state.randHexList}
-          delete={this.deleteAColor}
+          view={this.state.view}
+          del={this.deleteAColor}
           change={this.changeColor}
         />
       </div>

@@ -1,20 +1,18 @@
 import React from "react";
 import BoxOverlay from "./BoxOverlay/BoxOverlay";
-import "./RandHexBox.css";
+import classes from "./RandHexBox.module.css";
 
 const randHexBox = props => {
-  let classes = ["RandHexBox"];
+  let classN = [classes.RandHexBox];
   if (props.view === "listed") {
-    classes.push("list-view");
-    console.log(classes.join(" "));
+    classN.push(classes.listView);
   } else {
-    classes = ["RandHexBox"];
-    console.log(classes.join(" "));
+    classN = [classes.RandHexBox];
   }
 
   return (
     <div
-      className={classes.join(" ")}
+      className={classN.join(" ")}
       style={{ backgroundColor: props.randomHex }}
       onClick={props.change}
     >

@@ -31,8 +31,10 @@
 @media (max-width: 420px) {
   .ControlBar button {
     width: 70%;
+    font-size: 1.2rem;
   }
   .ControlBar select {
     width: 30%;
+    font-size: 1.2rem;
   }
 }

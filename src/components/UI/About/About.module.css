@@ -95,3 +95,18 @@ svg {
   fill: #2a6171;
   margin: 6px 24px;
 }
+
+@media (max-width: 420px) {
+  .profilePic {
+    width: 50%;
+  }
+
+  .bottomBar {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .bio {
+    grid-row: 2;
+  }
+}

@@ -14,3 +14,15 @@
   grid-template-columns: 40% auto;
   grid-template-rows: auto 50px;
 }
+
+@media (max-width: 420px) {
+  .Modal {
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    margin-left: 0;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 50px;
+  }
+}

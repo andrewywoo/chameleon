@@ -3,16 +3,27 @@ import RandHexBoxList from "./components/RandHexBoxList/RandHexBoxList";
 import NavBar from "./components/NavBar/NavBar";
 import ControlBar from "./components/ControlBar/ControlBar";
 import classes from "./App.module.css";
+import Modal from "./components/UI/Modal/Modal";
+import About from "./components/UI/About/About";
 
 class App extends Component {
   state = {
     randHexList: [{ hexColor: this.getColor() }],
-    view: "cards"
+    view: "tiled",
+    showAbout: false
   };
 
   getColor() {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
+
+  showAboutHandler = () => {
+    this.setState({ showAbout: true });
+  };
+
+  closeAboutHandler = () => {
+    this.setState({ showAbout: false });
+  };
 
   addAnotherColor = () => {
     const hexList = [...this.state.randHexList];
@@ -51,7 +62,10 @@ class App extends Component {
   render() {
     return (
       <div className={classes.App}>
-        <NavBar />
+        <Modal show={this.state.showAbout} close={this.closeAboutHandler}>
+          <About />
+        </Modal>
+        <NavBar about={this.showAboutHandler} />
         <ControlBar add={this.addAnotherColor} switch={this.switchView} />
         <RandHexBoxList
           hexList={this.state.randHexList}

@@ -57,6 +57,11 @@
   }
 }
 
+.about:hover {
+  color: seagreen;
+  cursor: pointer;
+}
+
 @media (max-width: 321px) {
   .brand {
     margin-right: 1rem;

@@ -24,23 +24,7 @@ class BoxOverlay extends Component {
   }
 
   render() {
-    const style = {
-      opacity: "0"
-    };
-
-    this.state.isTextVisible ? (style.opacity = 1) : (style.opacity = 0);
-
-    // (function() {
-    //   let flag = true;
-    //   return function() {
-    //     if (flag) {
-    //       flag = false;
-    //       this.showHexText();
-    //     }
-    //   };
-    // })();
-
-    //setTimeout(this.hideHexText, 2000);
+    let style = this.state.isTextVisible ? { opacity: "1" } : { opacity: "0" };
 
     return (
       <div className={classes.BoxOverlay} onMouseOver={this.showHexText}>

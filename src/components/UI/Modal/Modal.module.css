@@ -1,0 +1,13 @@
+.Modal {
+  width: 60%;
+  height: 60%;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  background: whitesmoke;
+  text-align: center;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  z-index: 500;
+  transition: all 0.5s;
+}

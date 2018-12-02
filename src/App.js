@@ -17,11 +17,11 @@ class App extends Component {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
 
-  showAboutHandler = () => {
+  showAboutHandler = e => {
     this.setState({ showAbout: true });
   };
 
-  closeAboutHandler = () => {
+  closeAboutHandler = e => {
     this.setState({ showAbout: false });
   };
 

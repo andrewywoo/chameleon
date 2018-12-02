@@ -1,9 +1,10 @@
 .Modal {
-  width: 70%;
+  width: 711px;
   height: 45%;
   position: fixed;
   top: 30%;
-  left: 15%;
+  left: 50%;
+  margin-left: -355.5px;
   background: whitesmoke;
   text-align: center;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);

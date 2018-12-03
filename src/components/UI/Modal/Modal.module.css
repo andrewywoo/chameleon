@@ -1,6 +1,6 @@
 .Modal {
   width: 711px;
-  height: 45%;
+  height: 50%;
   position: fixed;
   top: 30%;
   left: 50%;
@@ -24,5 +24,6 @@
     margin-left: 0;
     grid-template-columns: auto;
     grid-template-rows: auto auto 50px;
+    overflow: scroll;
   }
 }

@@ -1,0 +1,9 @@
+.bottomBar {
+  width: 100%;
+  height: 50px;
+  background: #75cac3;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}

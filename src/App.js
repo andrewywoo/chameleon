@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ControlBar from "./components/ControlBar/ControlBar";
 import classes from "./App.module.css";
 import Modal from "./components/UI/Modal/Modal";
-import About from "./components/UI/About/About";
+import About from "./components/About/About";
 
 class App extends Component {
   state = {

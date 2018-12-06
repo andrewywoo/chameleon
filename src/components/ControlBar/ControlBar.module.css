@@ -15,6 +15,7 @@
   cursor: pointer;
   outline: none;
   margin: 0.8rem;
+  touch-action: manipulation;
 }
 
 .ControlBar button:hover {

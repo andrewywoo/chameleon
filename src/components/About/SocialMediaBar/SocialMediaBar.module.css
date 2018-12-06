@@ -6,9 +6,18 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  grid-column: 1 / span 2;
+  grid-row: 2;
 }
 
 .bottomBar svg:hover {
   fill: #f3d516;
   cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  .bottomBar {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }

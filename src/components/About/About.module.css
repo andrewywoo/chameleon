@@ -1,11 +1,3 @@
-.bioBg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #d7f7f5;
-  z-index: -1;
-}
-
 .profilePic {
   margin: 8px 0;
   width: 80%;
@@ -90,30 +82,7 @@ svg {
     width: 50%;
   }
 
-  .bottomBar {
-    grid-column: 1;
-    grid-row: 3;
-  }
-
   .bio {
     grid-row: 2;
-  }
-}
-
-@media (max-height: 568px) {
-  .bioBg {
-    height: 105%;
-  }
-}
-
-@media (max-height: 414px) {
-  .bioBg {
-    height: 100%;
-  }
-}
-
-@media (max-height: 320px) {
-  .bioBg {
-    height: 140%;
   }
 }

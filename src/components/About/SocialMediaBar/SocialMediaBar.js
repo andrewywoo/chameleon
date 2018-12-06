@@ -3,7 +3,7 @@ import classes from "./SocialMediaBar.module.css";
 
 const socialMediaBar = props => {
   return (
-    <div className={classes.bottomBar} style={props.barPlacement}>
+    <div className={classes.bottomBar}>
       <svg
         onClick={() => window.open("https://github.com/andrewywoo/", "_blank")}
         role="img"

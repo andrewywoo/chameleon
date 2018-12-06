@@ -6,7 +6,6 @@ import pfPic from "./../../assets/profilepic.jpg";
 const about = () => {
   return (
     <>
-      <div className={classes.bioBg} />
       <img
         className={classes.profilePic}
         src={pfPic}
@@ -45,9 +44,7 @@ const about = () => {
           </ul>
         </div>
       </div>
-      <SocialMediaBar
-        barPlacement={{ gridColumn: "1 / span 2", gridRow: "2" }}
-      />
+      <SocialMediaBar />
     </>
   );
 };

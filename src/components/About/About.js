@@ -38,9 +38,6 @@ const about = () => {
                 andrew.woo@verizon.net
               </a>
             </li>
-            <li>
-              <button className={classes.resumeDl}>Download Resume</button>
-            </li>
           </ul>
         </div>
       </div>

@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project was started to bring together my recent learning of React and CSS3. The application consists of a couple of components that showcase knowledge of state changes, prop passing, event handlers, as well as things such as flexflow, css grid, modals, svgs.
 
+### Live App
+
+https://andrewywoo.github.io/chameleon-gh/
+
 ### `npm install`
 
 This will install all the necessary node pacakges using NPM manager.
